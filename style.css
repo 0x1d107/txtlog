@@ -1,0 +1,31 @@
+
+body{
+  color: white;
+  background: black;
+  font-family: sans-serif;
+}
+a{
+  color:#01d107;
+}
+a:visited{
+  color:#32a836;
+}
+h1{
+  text-align: center;
+}
+h1>a,h2>a,h3>a,h4>a,h5>a,h6>a,h1>a:visited,h2>a:visited,h3>a:visited,h4>a:visited,h5>a:visited,h6>a:visited{
+  color: darkorange;
+  text-decoration: none;
+}
+h1>a:hover,h2>a:hover,h3>a:hover,h4>a:hover,h5>a:hover,h6>a:hover{
+  color: darkorange;
+  text-decoration: underline;
+}
+.tag{
+    display:inline-block;
+    font-weight:bold;
+    border:dotted thin;
+}
+#posts  time {
+	float:right;
+}
