@@ -1,5 +1,5 @@
 #!/bin/bash
-HOST="http://119047.xyz"
+HOST="https://0x1d107.xyz/txtlog"
 TITLE="Blog feed"
 cat << HDR
 <rss version="2.0">

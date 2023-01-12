@@ -2,7 +2,7 @@
 EDITOR=${EDITOR:-vim}
 FEED_FILE="0x1d107.xml"
 TITLE="0x1d107's microblog posts"
-LINK="http://119047.xyz/$FEED_FILE"
+LINK="http://119047.xyz/txtlog/$FEED_FILE"
 post=$(mktemp post.XXXXXX)
 post_date=$(date -R)
 $EDITOR $post

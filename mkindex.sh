@@ -5,6 +5,7 @@ cat <<HDR
 			txt.log
 		</title>
 		<link rel="stylesheet" href="style.css" />
+        <link rel="alternate" type="application/rss+xml" href="feed.xml"/>
 	</head>
 <body>
 <h1> txt.log </h1>
