@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>0x1d107's microblog posts</title>
+    <link>http://119047.xyz/0x1d107.xml</link>
+    <description>0x1d107's microblog posts</description>
+    <item>
+      <description>Hi. This is my rss-only static microblog. Yeah it's pretty ugly rn, but I'll work on the style
+later. Here, I'll post stuff that doesn't have as much info to deserve a full article on the blog.</description>
+      <pubDate>Thu, 12 Jan 2023 20:27:40 +0500</pubDate>
+      <title>Microblog</title>
+      <guid>a6f734b4-928d-11ed-82e0-d85ed3548165</guid>
+    </item>
+  </channel>
+</rss>

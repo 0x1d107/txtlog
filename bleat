@@ -1,0 +1,57 @@
+#!/bin/bash
+EDITOR=${EDITOR:-vim}
+FEED_FILE="0x1d107.xml"
+TITLE="0x1d107's microblog posts"
+LINK="http://119047.xyz/$FEED_FILE"
+post=$(mktemp post.XXXXXX)
+post_date=$(date -R)
+$EDITOR $post
+if [ ! -s $post ] ;
+then 
+    rm $post
+    exit 1
+fi
+[ -s "$FEED_FILE" ] || cat > "$FEED_FILE" <<TEMPLATE
+<rss version="2.0">
+    <channel>
+        <title>$TITLE</title>
+        <link>$LINK</link>
+        <description>$TITLE</description>
+    </channel>
+</rss>
+TEMPLATE
+itemc=$(xml sel -t -v 'count(/rss/channel/item)' $FEED_FILE)
+
+declare -A meta
+meta[pubDate]="$(date -R)"
+meta[guid]="$(uuidgen -t)"
+
+post_title="$(grep -xm1 '# .\+' $post|cut -b3-)"
+if [ -n "$post_title" ]; then
+    meta[title]="$post_title"
+fi
+post_link="$(grep -xm1 '=> .\+' $post|cut -b4-)"
+if [ -n "$post_link" ]; then
+    meta[link]="$post_link"
+fi
+sed -i '/^=> .\+\|^# .\+/d' $post
+
+XMLARGS=()
+for key in ${!meta[@]}
+do
+    XMLARGS+=( -s '$prev/..' -t elem -n "$key" -v "${meta[$key]}" )
+done
+
+if [[ $itemc -eq 0 ]]; 
+then
+    xml ed -L -s "/rss/channel" -t elem -n item \
+           -s '$prev' -t elem -n description -v "$(xml esc <$post)"\
+           "${XMLARGS[@]}"\
+        $FEED_FILE
+else
+    xml ed -L -i "/rss/channel/item[1]" -t elem -n item\
+           -s '$prev' -t elem -n description -v "$(xml esc <$post)"\
+           "${XMLARGS[@]}"\
+        $FEED_FILE
+fi
+rm $post
