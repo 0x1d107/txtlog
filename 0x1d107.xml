@@ -5,6 +5,14 @@
     <link>http://119047.xyz/txtlog/0x1d107.xml</link>
     <description>0x1d107's microblog posts</description>
     <item>
+      <description>I've added a rss bot in a matrix room. Now I can shitpost in rss and it'll be posted in matrix chat
+room. Pretty cool, huh?</description>
+      <pubDate>Fri, 13 Jan 2023 10:04:20 +0500</pubDate>
+      <title>Matrix rss bot</title>
+      <guid>bd3f4e1a-92ff-11ed-9127-d85ed3548165</guid>
+      <link>https://matrix.to/#/#/var/log/shitpost:halogen.city</link>
+    </item>
+    <item>
       <description>Do you remember TCGs like Hearthstone or Magic the gathering? If you combine them with a turn-based
 strategy you get Duelyst.
 I'm glad to see more and more games getting open-sourced because it can serve as an example for
