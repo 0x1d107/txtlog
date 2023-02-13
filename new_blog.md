@@ -6,7 +6,7 @@ Hi. This is my new blog. Again. Here I'll post some how-to's and description of 
 Probably. I hope won't abandon it again. 
 ## Microblog
 If you want to read shorter chaotic twitter-like posts, you can also follow my rss-only feed:
-<http://0x1d107.xyz/txtlog/0x1d107.xml>. Here I share the links to projects of my interest and other
+<http://0x1d107.xyz/0x1d107.xml>. Here I share the links to projects of my interest and other
 stuff. warning: contains swearing and russian language.
 ## About the blog generator
 The main part of the blog generator is just a makefile. Make tracks files that changed and generates
