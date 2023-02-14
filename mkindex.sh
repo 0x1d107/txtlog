@@ -9,7 +9,7 @@ cat <<HDR
 	</head>
 <body>
 <h1> txt.log </h1>
-Blog about random stuff.
+$(lowdown README)
 <h2> Posts </h2>
 <ul id="posts">
 HDR

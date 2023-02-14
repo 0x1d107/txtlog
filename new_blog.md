@@ -9,6 +9,8 @@ If you want to read shorter chaotic twitter-like posts, you can also follow my r
 <http://0x1d107.xyz/0x1d107.xml>. Here I share the links to projects of my interest and other
 stuff. warning: contains swearing and russian language.
 ## About the blog generator
+update: I've published the repo [here](https://github.com/0x1d107/txtlog).
+
 The main part of the blog generator is just a makefile. Make tracks files that changed and generates
 the repective html output. For markdown to html conversion I use
 [lowdown](https://kristaps.bsd.lv/lowdown/) translator. As for the two "dynamic" files, `index.html`
