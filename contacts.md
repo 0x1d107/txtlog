@@ -20,8 +20,8 @@ them.
 - Esolangs ;) 
 
 ## Contacts
-|service | contact                               |
-|--------|---------------------------------------|
-|  email | yablinchik@gmail.com                  |
-|telegram| [@dev_stdout](https://t.me/dev_stdout)|
-|matrix  | @0x1d107:matrix.org                   |
+|service | contact                                                       |
+|--------|---------------------------------------------------------------|
+|  email | yablinchik@gmail.com                                          |
+|telegram| [@dev_stdout](https://t.me/dev_stdout)                        |
+|matrix  | [@0x1d107:matrix.org](https://matrix.to/#/@0x1d107:matrix.org)|
