@@ -11,7 +11,7 @@ cat <<HDR
 <h1> txt.log </h1>
 $(lowdown README)
 <h2> Posts </h2>
-<ul id="posts">
+<table id="posts">
 HDR
 for md in  $@
 do 
@@ -19,5 +19,5 @@ do
 	title=$(lowdown -Xtitle $md)
 	datetime=$(lowdown -Xdate $md)
 	echo -e "$datetime\t$title\t$md\t$html"
-done|sort -r|awk -F'\t' '{print "<li><a href="$4">"$2"</a> <time datetime="$1">"$1"</time></li>"}'
-echo "</ul></body>"
+done|sort -r|awk -F'\t' '{print "<tr><td><a href="$4">"$2"</a></td> <td><time datetime="$1">"$1"</time></td></tr>"}'
+echo "</table></body>"
