@@ -15,7 +15,7 @@ interface. The script also sets up DNS resolver using `openresolv`.
 anonyamous@server$ sudo apt install wireguard-tools
 ```
 
-First, we need to generate keys for DNS server. For security set umask to 0077 to restrict other
+First, we need to generate keys for VPN server. For security set umask to 0077 to restrict other
 users' access to keys.
 
 ```
