@@ -227,3 +227,31 @@ Restart ufw to apply changes
 ```
 anonyamous@server$ sudo systemctl restart ufw
 ```
+
+## SOCKS5 proxy
+For socks proxy I use dante. Edit `/etc/danted.conf` and
+set internal and exernal ip addresses.
+
+```
+external: <ip address here>
+# Be available only from vpn.
+internal: wg0 port=1080
+# no auth
+socksmethod: none
+clientmethod: none
+socks pass{
+	from:10.0.0.0/24 to: 0.0.0.0/0
+	protocol: tcp udp
+}
+```
+
+## Systemd strikes again
+There's still a problem with service starting order. Dante should start after wg-quick
+brings up the interface. 
+To fix it run `systemctl edit danted`
+
+```
+[Unit]
+Requires=wg-quick@wg0.service
+After=wg-quick@wg0.service
+```
