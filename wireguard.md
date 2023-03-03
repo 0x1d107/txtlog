@@ -1,5 +1,6 @@
 title: Wireguard VPN setup
 date: 2023-02-15
+tags: vpn,projects
 
 # Wireguard VPN setup
 
