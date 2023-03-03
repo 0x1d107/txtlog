@@ -12,6 +12,8 @@ cat <<HDR
 $(lowdown README)
 <h2> Posts </h2>
 <table id="posts">
+<thead><tr><th>Date</th><th>Title</th><th>Tags</th></tr></thead>
+<tbody>
 HDR
 cat $(ls -r lazyfeed/*.idx.html)
-echo "</table></body>"
+echo "</tbody></table></body></html>"

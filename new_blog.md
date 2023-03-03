@@ -1,5 +1,6 @@
 title: New blog, again
 date: 2023-01-07
+tags: blog
 
 # New blog
 Hi. This is my new blog. Again. Here I'll post some how-to's and description of my projects.
