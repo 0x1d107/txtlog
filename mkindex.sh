@@ -13,11 +13,5 @@ $(lowdown README)
 <h2> Posts </h2>
 <table id="posts">
 HDR
-for md in  $@
-do 
-	html=${md%.md}.html
-	title=$(lowdown -Xtitle $md)
-	datetime=$(lowdown -Xdate $md)
-	echo -e "$datetime\t$title\t$md\t$html"
-done|sort -r|awk -F'\t' '{print "<tr><td><a href="$4">"$2"</a></td> <td><time datetime="$1">"$1"</time></td></tr>"}'
+cat $(ls -r lazyfeed/*.idx.html)
 echo "</table></body>"

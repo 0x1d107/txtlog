@@ -8,20 +8,7 @@ cat << HDR
 	<link>${HOST}/feed.xml</link>
 	<description>${TITLE}</description>
 HDR
-for md in $@
-do
-	html=${md%.md}.html
-	pubdate=$(date --date=$(lowdown -Xdate $md) -R)
-	cat << ITM
-	<item>
-		<title>$(lowdown -Xtitle $md)</title>
-		<link>${HOST}/${html}</link>
-		<description><![CDATA[$(lowdown $md)]]></description>
-		<pubDate>${pubdate}</pubDate>
-		<guid>${HOST}/${html}</guid>
-	</item>
-ITM
-done
+cat $(ls -r lazyfeed/*.xml)
 cat <<FTR
 </channel>
 </rss>
