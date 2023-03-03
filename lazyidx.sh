@@ -2,7 +2,7 @@ md=$1
 html=${md%.md}.html
 title=$(lowdown -Xtitle $md)
 datetime=$(lowdown -Xdate $md)
-tags="$(lowdown -mtags='' -Xtags $md)"
+tags="$(lowdown -mtags='' -Xtags $md|tr '[:upper:]' '[:lower:]')"
 mkdir -p lazyfeed/tags
 idx=$datetime.$html.idx.html
 tag_links=""
@@ -15,5 +15,4 @@ done
 cat > lazyfeed/$idx << ENTRY
     <tr><td>$datetime</td><td><a href="$html">$title</a></td><td>$tag_links</td></tr>
 ENTRY
-#[ -e index.html ] && [ -z "$(grep $html index.html)" ] && sed -i '/id="posts"/a '"$entry" index.html
 
