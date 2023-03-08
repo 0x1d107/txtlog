@@ -32,7 +32,7 @@ anonyamous@server$ wg pubkey < private_key > public_key
 
 Now we create wireguard interface configuration file `server.conf`.
 
-```
+```ini
 # Server configuration
 [Interface]
 Address = 10.0.0.1/24 # Server address in the VPN
@@ -49,7 +49,7 @@ anonyamous@client$ wg pubkey < client_private_key > client_public_key
 
 And create configuration file `client.conf` similar to the one on the server.
 
-```
+```ini
 # Client configuration
 [Interface]
 Address = 10.0.0.2/24 # Client address in the VPN
@@ -63,7 +63,7 @@ field you should specify what subnet is going to be routed to the server.
 If you want expose the client behind NAT to the VPN subnet, specify seconds between keep-alive packets in
 `PersistentKeepalive` field.
 
-```
+```ini
 # Client configuration
 [Interface]
 Address = 10.0.0.2/24 # Client address in the VPN
@@ -79,7 +79,7 @@ AllowedIPs = 0.0.0.0/0 # All traffic will be routed through the server
 
 Now on the server:
 
-```
+```ini
 # Server configuration
 [Interface]
 Address = 10.0.0.1/24 # Server address in the VPN
@@ -175,7 +175,7 @@ COMMIT
 
 Now diff of backup and new config should look like that
 
-```
+```diff
 anonyamous@server$ sudo diff -c8 /etc/ufw/before.rules.20230125_150929 /etc/ufw/before.rules
 *** /etc/ufw/before.rules.20230125_150929	2020-11-28 19:02:12.000000000 +0000
 --- /etc/ufw/before.rules	2023-01-30 10:49:47.689204778 +0000
@@ -251,7 +251,7 @@ There's still a problem with service starting order. Dante should start after wg
 brings up the interface. 
 To fix it run `systemctl edit danted`
 
-```
+```ini
 [Unit]
 Requires=wg-quick@wg0.service
 After=wg-quick@wg0.service

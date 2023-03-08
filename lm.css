@@ -1,0 +1,8 @@
+@font-face{
+	font-family:'Latin Modern Math';
+	src: url('vendor/latinmodern-math.woff2');
+	font-display:swap;
+}
+math {
+	font-family: 'Latin Modern Math',"Cambria Math",'STIXTwoMath-Regular','Asana Math','Roboto Math',math;
+}
