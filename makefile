@@ -13,7 +13,7 @@ feed.xml:mkfeed.sh $(pages)
 	bash lazyidx.sh $<
 	bash lazyfeed.sh $<
 publish: all
-	rsync -avz --progress --rsh='ssh -i ~/.ssh/vultr_id_ed25519'  *.html *.xml *.css *.js vendor root@vultr:/var/www/html/
+	rsync -avz --delete --progress --rsh='ssh -i ~/.ssh/vultr_id_ed25519'  *.html *.xml *.xsl *.css vendor root@vultr:/var/www/html/
 clean:
 	rm -rvf index.html feed.xml $(pages) lazyfeed tag-*.html
 .PHONY: clean publish

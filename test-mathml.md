@@ -1,6 +1,6 @@
 title: MathML rendering test
-date: 2023-03-08
-tags: blog
+date: 2023-03-21
+tags: blog projects
 
 # MathML rendering
 [MathML](https://www.w3.org/Math/) is a XML-based mathematical markup language for describing mathematical 
@@ -21,3 +21,12 @@ notations.
 * $\displaystyle \int \operatorname{sh} x d x=\operatorname{ch} x+C \quad(x \in R)$;
 * $\displaystyle \int \cfrac{d x}{\operatorname{ch}^{2} x}=\operatorname{th} x+C(x \in R)$
 * $\displaystyle \int \cfrac{d x}{\operatorname{sh}^{2} x}=\operatorname{cth} x+C(x \neq 0)$.
+
+## Mathml on the blog
+I've written custom postprocessor for lowdown html output. 
+It uses [pygments](https://pygments.org) to highlight code and
+[latex2mathml](https://github.com/roniemartinez/latex2mathml) to convert latex to mathml.
+
+Right now postprocessing really slows down processing of a single file compared to pure lowdown.
+And pandoc doesn't respect the `\displaystyle` command. Maybe later I'll switch to another markdown
+processor.
