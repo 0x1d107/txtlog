@@ -10,8 +10,7 @@ For easier further configuration we need to install Packer plugin manager by clo
 [repository](https://github.com/wbthomason/packer.nvim) somewhere in the `packpath`.
 
 ```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 Then create `~/.config/nvim/lua/plugins.lua` where we'll specify all plugins that need to be
