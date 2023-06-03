@@ -16,7 +16,7 @@ publish: all
 	git add *.md
 	git commit -am 'edit articles'
 	git push
-	rsync -avz --delete --progress --rsh='ssh -i ~/.ssh/vultr_id_ed25519'  *.html *.xml *.xsl *.css vendor root@vultr:/var/www/html/
+	rsync -avz --delete --progress --rsh='ssh -i ~/.ssh/vultr_id_ed25519' *.ico *.html *.xml *.xsl *.css vendor root@vultr:/var/www/html/
 clean:
 	rm -rvf index.html feed.xml $(pages) lazyfeed tag-*.html
 .PHONY: clean publish
