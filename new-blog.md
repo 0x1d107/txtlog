@@ -8,7 +8,7 @@ Probably. I hope won't abandon it again.
 ## Microblog
 If you want to read shorter chaotic twitter-like posts, you can also follow my rss-only feed:
 <http://0x1d107.xyz/0x1d107.xml>. Here I share the links to projects of my interest and other
-stuff. warning: contains swearing and russian language.
+stuff. 
 ## About the blog generator
 update: I've published the repo [here](https://github.com/0x1d107/txtlog).
 
