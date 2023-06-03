@@ -1,7 +1,8 @@
 #!/bin/bash
 for tag in $(ls lazyfeed/tags)
 do
-cat > tag-$tag.html << HDR
+TAGIDX=html/tag-$tag.html
+cat > $TAGIDX << HDR
 <html>
 <head>
     <title> Posts tagged $tag </title>
@@ -11,6 +12,6 @@ cat > tag-$tag.html << HDR
     <h1> Posts tagged $tag </h1>
 <table id="posts">
 HDR
-cat $(ls -r lazyfeed/tags/$tag/*.idx.html) >> tag-$tag.html
-echo "</table></body></html>" >> tag-$tag.html
+cat $(ls -r lazyfeed/tags/$tag/*.idx.html) >> $TAGIDX
+echo "</table></body></html>" >> $TAGIDX
 done
