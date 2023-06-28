@@ -1,4 +1,5 @@
 #EXTM3U
+# Playlist created by SMPlayer 22.7.0 (revision 10091) 
 #EXTINF:4.05333,Provoda.ch
 http://station.waveradio.org/provodach
 #EXTINF:3.02933,witch.waveradio
@@ -7,26 +8,32 @@ https://station.waveradio.org/witch
 http://station.waveradio.org/soviet
 #EXTINF:2.58612,Nightwave Plaza
 http://radio.plaza.one/mp3
-#EXTINF:0,Syntheticfm
-http://stream.syntheticfm.com:8040/live
+#EXTINF:0.653061,Syntheticfm
+http://stream.syntheticfm.com:8040/stream
 #EXTINF:1.11456,ETN.fm Trance
 http://8.43.48.6:8120/
-#EXTINF:0,ROCK ANTENNE
+#EXTINF:2.53388,schizoid.in psytrance
+http://94.130.113.214:8000/schizoid
+#EXTINF:0.783673,schizoid.in progressive
+http://94.130.113.214:8000/prog
+#EXTINF:1.93306,ROCK ANTENNE
 https://s2-webradio.rockantenne.de/rockantenne
 #EXTINF:4.45823,Keygen-FM
-http://95.143.216.164:8080/
-#EXTINF:14.9769,lo fi hip hop study
-https://www.youtube.com/watch?v=jfKfPfyJRdk
-#EXTINF:14.9883,lo fi hip hop sleep
-https://www.youtube.com/watch?v=rUxyKA_-grg
+http://stream.keygen-fm.ru:8082/
+#EXTINF:1.12326,schizoid.in dubtechno
+http://94.130.113.214:8000/dubtechno
+#EXTINF:2.53388,schizoid.in chill
+http://94.130.113.214:8000/chill
 #EXTINF:1.35837,Another Music Project
 http://radio.anothermusicproject.com:8000/idm
+#EXTINF:3.91837,chillsky
+https://lfhh.radioca.st/stream
 #EXTINF:2.19429,Piano Di Notte
 https://radio.anothermusicproject.com:8443/pianodinotte
-#EXTINF:3.81388,freecodecamp
-https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3
 #EXTINF:1.95918,friskyradio.chill
 http://chill.friskyradio.com/friskychill_mp3_high
+#EXTINF:3.81388,freecodecamp
+https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3
 #EXTINF:2.43211,tilderadio
 https://azuracast.tilderadio.org/radio/8000/320k.ogg
 #EXTINF:4.3102,Gulf Stream Radio
