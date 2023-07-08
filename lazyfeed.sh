@@ -10,7 +10,7 @@ cat > "lazyfeed/${xdate}.${html}.item.xml" << ITM
 	<item>
 		<title>$(lowdown -Xtitle $md)</title>
 		<link>${HOST}/${html}</link>
-		<description><![CDATA[$(lowdown $md)]]></description>
+		<description><![CDATA[$(awk -vRS= 'NR==2' $md|lowdown)]]></description>
 		<pubDate>${pubdate}</pubDate>
 		<guid>${HOST}/${html}</guid>
 	</item>

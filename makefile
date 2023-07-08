@@ -13,7 +13,7 @@ html/feed.xml:mkfeed.sh $(pages)
 
 html/%.html:%.md
 	mkdir -p html
-	lowdown -s --parse-math -mcss=style.css -thtml $< | python postproc.py > $@
+	lowdown -s --parse-math -mcss=style.css -thtml $<  | python postproc.py > $@
 	bash lazyidx.sh $<
 	bash lazyfeed.sh $<
 publish: all

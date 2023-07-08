@@ -25,7 +25,7 @@ TEMPLATE
 itemc=$(xml sel -t -v 'count(/rss/channel/item)' $FEED_FILE)
 
 declare -A meta
-meta[pubDate]="$(date -R)"
+meta[pubDate]="$(date -Ru)"
 meta[guid]="$(uuidgen -t)"
 
 post_title="$(grep -xm1 '# .\+' $post|cut -b3-)"
