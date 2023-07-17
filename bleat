@@ -12,7 +12,7 @@ then
     exit 1
 fi
 #Download latest version
-curl -OL "$LINK"
+curl -L "$LINK" > $FEED_FILE
 [ -s "$FEED_FILE" ] || cat > "$FEED_FILE" <<TEMPLATE
 <rss version="2.0">
     <channel>

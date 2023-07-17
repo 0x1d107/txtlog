@@ -3,15 +3,12 @@ date: 2023-02-15
 tags: vpn,projects
 
 # Wireguard VPN setup
-
 Here and later I'll be using debian names for packages. If you use other distributions, adapt the
 package names accordingly.
-
 ## Wireguard setup
 For userland utilities install `wireguard-tools` package. The package provides `wg` utility for
 configuration of wireguard interfaces and `wg-quick` bash script for easily bringing up the
 interface. The script also sets up DNS resolver using `openresolv`.
-
 ```
 anonyamous@server$ sudo apt install wireguard-tools
 ```
